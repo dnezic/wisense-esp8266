@@ -166,7 +166,7 @@ void ICACHE_FLASH_ATTR read_all(struct sensor_result* sr) {
 
   #ifdef DEBUG
         for(i = 0; i < 8; i++) {
-                os_printf("%s Raw byte from BME: %i %d\n", __FUNCTION__, i, raw[i]);
+                os_printf("%s Raw byte from BME: %d %d\n", __FUNCTION__, i, raw[i]);
         }
   #endif
 

@@ -62,7 +62,7 @@ void tcp_connected( void *arg )
         #else
           remote_hostname = REMOTE_IP;
         #endif
-
+        os_sprintf( json_data, "{\"temperature\": \"%s\", \"humidity\": \"%s\", \"pressure\": \"%s\"}", dt, dh, dp );
         os_sprintf( buffer, "POST %s HTTP/1.1\r\nHost: %s\r\nConnection: close\r\nContent-Type: application/json\r\nContent-Length: %d\r\n\r\n%s",
                     DATA_URL, remote_hostname, os_strlen( json_data ), json_data );
 
@@ -177,7 +177,7 @@ void wifi_callback( System_Event_t *evt )
                 #else
                   to_ip_address();
                 #endif
-                
+
                 break;
         }
 
