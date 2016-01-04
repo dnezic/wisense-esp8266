@@ -1,3 +1,5 @@
+#include "debug.h"
+
 #define BME280_addr    0x76
 #define MODE 1
 
